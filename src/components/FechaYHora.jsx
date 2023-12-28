@@ -14,6 +14,7 @@ const FechaYHora = () => {
         let min = date.getMinutes();
         min = min < 10 ? '0'+min : min
         setHoraActual(hora + ':' + min);
+        console.log('actualiza hora')
     };
 
     const actualizarFecha = () => {
