@@ -1,0 +1,5 @@
+.fecha_y_hora {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

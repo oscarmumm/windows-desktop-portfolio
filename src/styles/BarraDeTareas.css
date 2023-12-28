@@ -1,0 +1,15 @@
+.barra_de_tareas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #162b4e;
+    color: #fff;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.logo {
+    width: 30px;
+}
