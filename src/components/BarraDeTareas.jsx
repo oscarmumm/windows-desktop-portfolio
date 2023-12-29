@@ -1,18 +1,30 @@
-import '../styles/BarraDeTareas.css'
-import logo from '../assets/icons/windows-174-svgrepo-com.svg'
-import FechaYHora from './FechaYHora'
+import "../styles/BarraDeTareas.css";
+import logo from "../assets/icons/windows-174-svgrepo-com.svg";
+import FechaYHora from "./FechaYHora";
 
-const BarraDeTareas = () => {
-  return (
-    <div className="barra_de_tareas">
-        <div>
-            <img className='logo' src={logo} alt="" />
+const BarraDeTareas = ({
+    listaProgramasActive,
+    cerrarListaProgramas,
+    abrirListaProgramas,
+}) => {
+    const clickEnInicio = () => {
+        listaProgramasActive ? cerrarListaProgramas() : abrirListaProgramas();
+    };
+    return (
+        <div className="barra_de_tareas">
+            <div>
+                <img
+                    className="logo"
+                    src={logo}
+                    alt=""
+                    onClick={clickEnInicio}
+                />
+            </div>
+            <div>
+                <FechaYHora />
+            </div>
         </div>
-        <div>
-            <FechaYHora />
-        </div>
-    </div>
-  )
-}
+    );
+};
 
-export default BarraDeTareas
+export default BarraDeTareas;
