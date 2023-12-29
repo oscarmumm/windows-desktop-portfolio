@@ -1,0 +1,22 @@
+.accesos_directos_escritorio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.acceso_directo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono_acceso_directo {
+    width: 70px;
+    cursor: pointer;
+}
+
+.leyenda_acceso_directo {
+    margin-top: .25rem;
+    color: #fff;
+}

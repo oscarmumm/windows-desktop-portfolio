@@ -4,7 +4,7 @@
     justify-content: space-between;
     background-color: #162b4e;
     color: #fff;
-    padding: .5rem;
+    padding: .5rem 1rem;
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -12,4 +12,5 @@
 
 .logo {
     width: 30px;
+    cursor: pointer;
 }
