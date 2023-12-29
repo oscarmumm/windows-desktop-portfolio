@@ -4,7 +4,8 @@
     bottom: 0;
     width: 300px;
     height: 500px;
-    background-color: #162b4e;
+    background-color: #010813;
+    /* background-color: #162b4e; */
     filter: opacity(55%);
     z-index: 2;
     color: #fff;

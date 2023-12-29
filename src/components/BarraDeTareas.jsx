@@ -12,7 +12,7 @@ const BarraDeTareas = ({
     };
     return (
         <div className="barra_de_tareas">
-            <div>
+            <div className="logo_container">
                 <img
                     className="logo"
                     src={logo}
