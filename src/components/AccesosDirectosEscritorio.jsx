@@ -1,6 +1,6 @@
 import mipc_icon from "../assets/icons/monitor-svgrepo-com.svg";
 import archivos_icon from '../assets/icons/files-folder-svgrepo-com.svg'
-import "../styles/AccesosDirectosEscritorio.css";
+import "../styles/AccesosDirectos.css";
 
 const AccesosDirectosEscritorio = ({abrirMiPc}) => {
     const clickEnMiPc = () => {

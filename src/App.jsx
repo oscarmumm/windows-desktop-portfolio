@@ -3,6 +3,7 @@ import BarraDeTareas from "./components/BarraDeTareas";
 import AccesosDirectosEscritorio from "./components/AccesosDirectosEscritorio";
 import {useState} from "react";
 import Window from "./components/Window";
+import MiPc from "./components/MiPc";
 import ListaDeProgramas from "./components/ListaDeProgramas";
 
 function App() {
@@ -12,13 +13,16 @@ function App() {
     const abrirMiPc = () => {
         setMiPcActive(true);
     };
+    const cerrarMiPc = () => {
+        setMiPcActive(false);
+    };
 
     const abrirListaProgramas = () => {
-      setListaProgramasActive(true)
-    }
+        setListaProgramasActive(true);
+    };
     const cerrarListaProgramas = () => {
-      setListaProgramasActive(false)
-    }
+        setListaProgramasActive(false);
+    };
 
     return (
         <div className="desktop_app">
@@ -28,7 +32,7 @@ function App() {
                 cerrarListaProgramas={cerrarListaProgramas}
                 listaProgramasActive={listaProgramasActive}
             />
-            {miPcActive ? <Window /> : null}
+            {miPcActive ? <MiPc cerrarMiPc={cerrarMiPc} /> : null}
             {listaProgramasActive ? <ListaDeProgramas /> : null}
         </div>
     );

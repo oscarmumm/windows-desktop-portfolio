@@ -5,6 +5,10 @@
     padding: 1rem;
 }
 
+.accesos_directos_window {
+    padding: 1rem;
+}
+
 .acceso_directo{
     display: flex;
     flex-direction: column;

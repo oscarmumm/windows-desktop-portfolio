@@ -1,5 +1,31 @@
 .window {
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
     width: 200px;
     height: 200px;
-    background-color: #fff;
+    background-color: #5c5d69;
+    border: 2px solid #010813;
+    border-top: none;
+}
+
+.window_btn_container {
+    background-color: #010813;
+    display: flex;
+    justify-content: end;
+}
+
+.window_btn {
+    width: 30px;
+    border: none;
+    background-color: #010813;
+    color: #fff;
+    padding: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.window_close_btn:hover {
+    background-color: #E81123;
 }
