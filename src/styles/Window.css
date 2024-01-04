@@ -2,8 +2,8 @@
     position: fixed;
     top: 30vh;
     left: 30vw;
-    width: 200px;
-    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
     background-color: #5c5d69;
     border: 2px solid #010813;
     border-top: none;

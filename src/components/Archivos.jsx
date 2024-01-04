@@ -1,10 +1,10 @@
 import "../styles/Window.css";
-import txt_icon from '../assets/icons/txt-svgrepo-com.svg'
+import pdf_icon from "../assets/icons/pdf-svgrepo-com.svg";
 
-const MiPc = ({cerrarMiPc}) => {
+const Archivos = ({cerrarArchivos}) => {
     const handleClick = () => {
-        cerrarMiPc();
-    };
+        cerrarArchivos();
+    }
     return (
         <div className="window">
             <div className="window_btn_container">
@@ -17,12 +17,16 @@ const MiPc = ({cerrarMiPc}) => {
             </div>
             <div className="accesos_directos_window">
                 <div className="acceso_directo">
-                    <img className="icono_acceso_directo" src={txt_icon} alt="" />
-                    <p className="leyenda_acceso_directo">Bienvenido.txt</p>
+                    <img
+                        className="icono_acceso_directo"
+                        src={pdf_icon}
+                        alt=""
+                    />
+                    <p className="leyenda_acceso_directo">Curriculum Vitae.pdf</p>
                 </div>
             </div>
         </div>
     );
 };
 
-export default MiPc;
+export default Archivos;
