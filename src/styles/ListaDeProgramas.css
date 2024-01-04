@@ -8,6 +8,7 @@
     /* background-color: #162b4e; */
     z-index: 2;
     color: #fff;
+    border-radius: 0 10px 0 0;
 }
 
 .lista_de_programas-titulo {
@@ -18,6 +19,13 @@
     list-style: none;
     display: flex;
     align-items: center;
+    border-radius: 10px;
+}
+
+.lista_de_programas li:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+
 }
 
 .lista_de_programas-icono {

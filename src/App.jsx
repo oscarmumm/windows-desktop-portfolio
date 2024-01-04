@@ -13,6 +13,7 @@ function App() {
     const [miPcActive, setMiPcActive] = useState(false);
     const [bienvenidoActive, setBienvenidoActive] = useState(false);
     const [archivosActive, setArchivosActive] = useState(false);
+    const [appNotasActive, setAppNotasActive] = useState(false)
 
     const abrirMiPc = () => {
         setMiPcActive(true);
@@ -33,6 +34,13 @@ function App() {
     };
     const cerrarBienvenido = () => {
         setBienvenidoActive(false);
+    };
+    
+    const abrirAppNotas = () => {
+        setAppNotasActive(true);
+    };
+    const cerrarAppNotas = () => {
+        setAppNotasActive(false);
     };
 
     const abrirListaProgramas = () => {

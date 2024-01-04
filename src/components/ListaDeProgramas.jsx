@@ -7,7 +7,7 @@ import agenda_logo from '../assets/icons/calendar-svgrepo-com.svg'
 const ListaDeProgramas = () => {
     return (
         <div className="lista_de_programas">
-            <h3 className="lista_de_programas-titulo">Lista de programas</h3>
+            <h3 className="lista_de_programas-titulo">Todos los programas</h3>
             <ul>
                 <li>
                     <img className="lista_de_programas-icono" src={clima_logo} alt="" />
