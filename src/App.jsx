@@ -7,6 +7,7 @@ import MiPc from "./components/MiPc";
 import ListaDeProgramas from "./components/ListaDeProgramas";
 import Bienvenido from "./components/Bienvenido";
 import Archivos from "./components/Archivos";
+import AppNotas from "./components/apps/notas/AppNotas";
 
 function App() {
     const [listaProgramasActive, setListaProgramasActive] = useState(false);
@@ -38,6 +39,7 @@ function App() {
     
     const abrirAppNotas = () => {
         setAppNotasActive(true);
+        setListaProgramasActive(false)
     };
     const cerrarAppNotas = () => {
         setAppNotasActive(false);
@@ -67,7 +69,8 @@ function App() {
                 <Bienvenido cerrarBienvenido={cerrarBienvenido} />
             ) : null}
             {archivosActive ? <Archivos cerrarArchivos={cerrarArchivos} /> : null}
-            {listaProgramasActive ? <ListaDeProgramas /> : null}
+            {appNotasActive ? <AppNotas cerrarAppNotas={cerrarAppNotas} /> : null}
+            {listaProgramasActive ? <ListaDeProgramas abrirAppNotas={abrirAppNotas} /> : null}
         </div>
     );
 }

@@ -4,7 +4,10 @@ import calculadora_logo from '../assets/icons/calculator-svgrepo-com.svg'
 import notas_logo from '../assets/icons/notes-notepad-svgrepo-com.svg'
 import agenda_logo from '../assets/icons/calendar-svgrepo-com.svg'
 
-const ListaDeProgramas = () => {
+const ListaDeProgramas = ({abrirAppNotas}) => {
+    const clickEnAppNotas = () => {
+        abrirAppNotas()
+    }
     return (
         <div className="lista_de_programas">
             <h3 className="lista_de_programas-titulo">Todos los programas</h3>
@@ -17,7 +20,7 @@ const ListaDeProgramas = () => {
                     <img className="lista_de_programas-icono" src={calculadora_logo} alt="" />
                     <p>Calculadora</p>
                 </li>
-                <li>
+                <li onClick={clickEnAppNotas}>
                     <img className="lista_de_programas-icono" src={notas_logo} alt="" />
                     <p>Mis Notas</p>
                 </li>
