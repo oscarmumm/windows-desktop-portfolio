@@ -12,10 +12,10 @@ const MiPc = ({cerrarMiPc}) => {
                 <button
                     className="window_btn window_close_btn"
                     onClick={handleClick}>
-                    X
+                    ╳
                 </button>
             </div>
-            <div className="accesos_directos_window">
+            <div className="window_content">
                 <div className="acceso_directo">
                     <img className="icono_acceso_directo" src={txt_icon} alt="" />
                     <p className="leyenda_acceso_directo">Bienvenido.txt</p>

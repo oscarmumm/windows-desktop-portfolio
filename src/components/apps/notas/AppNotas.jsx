@@ -9,10 +9,10 @@ const AppNotas = ({cerrarAppNotas}) => {
                 <button
                     className="window_btn window_close_btn"
                     onClick={handleClick}>
-                    X
+                    ╳
                 </button>
             </div>
-            <div className="accesos_directos_window">
+            <div className="window_content">
                 <div className="acceso_directo">
                     <img
                         className="icono_acceso_directo"

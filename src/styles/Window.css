@@ -4,28 +4,33 @@
     left: 30vw;
     min-width: 200px;
     min-height: 200px;
-    background-color: #5c5d69;
-    border: 2px solid #010813;
+    background-color: #272727;
     border-top: none;
+    border-radius: 0 0 5px 5px;
 }
 
 .window_btn_container {
-    background-color: #010813;
+    background-color: #202020;
     display: flex;
     justify-content: end;
+    border: none;
 }
 
 .window_btn {
-    width: 30px;
+    width: 35px;
     border: none;
-    background-color: #010813;
+    background-color: #202020;
     color: #fff;
-    padding: .5rem;
+    padding: 0.5rem;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
 }
 
+.window_close_btn {
+    font-size: 10px;
+}
+
 .window_close_btn:hover {
-    background-color: #E81123;
+    background-color: #e81123;
 }
