@@ -10,7 +10,7 @@ import Archivos from "./components/Archivos";
 import AppNotas from "./components/apps/notas/AppNotas";
 
 const dataForm = {
-    dataNotas:[{id: 1, titulo: 'hola', texto: 'texto'}],
+    dataNotas:[{id: 1, titulo: 'Ejemplo', texto: 'Esta es solo una nota de ejemplo'}],
     dataClima:[],
     dataAgenda:[]
 }

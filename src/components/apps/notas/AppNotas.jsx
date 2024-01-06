@@ -7,7 +7,7 @@ import AppNotasForm from "./AppNotasForm";
 
 const AppNotas = ({ cerrarAppNotas }) => {
     const [nuevaNotaActive, setNuevaNotaActive] = useState(false);
-    const {data, setData} = useContext(DataContext)
+    const { data, setData } = useContext(DataContext);
     const handleClick = () => {
         cerrarAppNotas();
     };
@@ -28,20 +28,30 @@ const AppNotas = ({ cerrarAppNotas }) => {
                     <img className="app_notas-logo" src={notas_logo} alt="" />
                     <h3>Mis Notas</h3>
                 </div>
-                <ul className="app_notas-lista_de_notas">
-                    {data.dataNotas ? (
-                        data.dataNotas.map((el) => (
-                            <li key={el.id}>
-                                <h4>{el.titulo}</h4>
-                                <p>{el.texto}</p>
-                            </li>
-                        ))
-                    ) : (
-                        <p>No hay notas guardadas</p>
-                    )}
-                </ul>
-                <button className="nueva_nota_btn">+</button>
-                <AppNotasForm />
+                <div className="app_notas-body">
+                    <AppNotasForm />
+
+                    <ul className="app_notas-lista_de_notas">
+                        {data.dataNotas ? (
+                            data.dataNotas.map((el) => (
+                                <li
+                                    className="app_notas-lista_de_notas-nota"
+                                    key={el.id}
+                                >
+                                    <h4 className="app_notas-lista_de_notas-nota-titulo">
+                                        {el.titulo}
+                                    </h4>
+                                    <p className="app_notas-lista_de_notas-nota-texto">
+                                        {el.texto}
+                                    </p>
+                                </li>
+                            ))
+                        ) : (
+                            <p>No hay notas guardadas</p>
+                        )}
+                    </ul>
+                    <button className="nueva_nota_btn">+</button>
+                </div>
             </div>
         </div>
     );
