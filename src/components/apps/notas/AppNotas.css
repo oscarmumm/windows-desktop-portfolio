@@ -46,7 +46,7 @@
 .app_notas-form {
     border: 1px solid var(--color4);
     border-radius: 10px;
-    width: 70vw;
+    width: 50vw;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
     height: 50vh;
 }
 
-.app_notas-textarea,
+.app_notas-textarea:focus,
 .app_notas-input_titulo:focus {
     outline: none;
     background-color: var(--color2);

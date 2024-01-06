@@ -1,25 +1,15 @@
 import "../../../styles/Window.css";
-import "../../../styles/AppNotas.css";
+import "../notas/AppNotas.css";
 import notas_logo from "../../../assets/icons/notes-notepad-svgrepo-com.svg";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { DataContext } from "../../../contexts/DataContext";
+import AppNotasForm from "./AppNotasForm";
 
 const AppNotas = ({ cerrarAppNotas }) => {
-    const [notas, setNotas] = useState([]);
     const [nuevaNotaActive, setNuevaNotaActive] = useState(false);
-    const [titulo, setTitulo] = useState("");
-    const [texto, setTexto] = useState("");
-
+    const {data, setData} = useContext(DataContext)
     const handleClick = () => {
         cerrarAppNotas();
-    };
-
-    const guardarNota = (e) => {
-        e.preventDefault();
-        setNotas([
-            ...notas,
-            { id: Date.now().toString(), titulo: titulo, texto: texto },
-        ]);
-        console.log(notas);
     };
 
     return (
@@ -39,36 +29,19 @@ const AppNotas = ({ cerrarAppNotas }) => {
                     <h3>Mis Notas</h3>
                 </div>
                 <ul className="app_notas-lista_de_notas">
-                    {notas.length > 0 ? (
-                        <p>hay notas</p>// notas.map((el) => <li>{el}</li>)
+                    {data.dataNotas ? (
+                        data.dataNotas.map((el) => (
+                            <li key={el.id}>
+                                <h4>{el.titulo}</h4>
+                                <p>{el.texto}</p>
+                            </li>
+                        ))
                     ) : (
                         <p>No hay notas guardadas</p>
                     )}
                 </ul>
                 <button className="nueva_nota_btn">+</button>
-                <form className="app_notas-form">
-                    <label htmlFor="titulo"></label>
-                    <input
-                        onChange={(e) => setTitulo(e.target.value)}
-                        className="app_notas-input_titulo"
-                        type="text"
-                        placeholder="Título..."
-                    />
-                    <label htmlFor="texto"></label>
-                    <textarea
-                        onChange={(e) => setTexto(e.target.value)}
-                        className="app_notas-textarea"
-                        name="texto"
-                        id=""
-                        placeholder="Escribe tu nota..."
-                    ></textarea>
-                    <button
-                        onClick={(e) => guardarNota(e)}
-                        className="app_notas-guardar-btn"
-                    >
-                        Guardar
-                    </button>
-                </form>
+                <AppNotasForm />
             </div>
         </div>
     );
