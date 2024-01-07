@@ -1,24 +1,37 @@
 import { useState, useContext } from "react";
 import { DataContext } from "../../../contexts/DataContext";
+import AppNotasModalTituloVacio from "./AppNotasModalTituloVacio";
 
 const AppNotasForm = () => {
-    const {data, setData} = useContext(DataContext)
-    const notas = data.dataNotas
+    const { data, setData } = useContext(DataContext);
+    const notas = data.dataNotas;
+    const [modalTituloVacio, setModalTituloVacio] = useState(false);
     const [titulo, setTitulo] = useState("");
     const [texto, setTexto] = useState("");
+    const cerrarModal = () => {
+        setModalTituloVacio(false);
+    };
     const guardarNota = (e) => {
         e.preventDefault();
-        let nuevaNota = { id: Date.now().toString(), titulo: titulo, texto: texto } 
-        notas.push(nuevaNota)
-        let newData = {
-            dataNotas: notas,
-            dataClima: data.dataClima,
-            dataAgenda: data.dataAgenda
+        if (titulo.trim() === "") {
+            setModalTituloVacio(true);
+        } else {
+            let nuevaNota = {
+                id: Date.now().toString(),
+                titulo: titulo,
+                texto: texto,
+            };
+            notas.push(nuevaNota);
+            let newData = {
+                dataNotas: notas,
+                dataClima: data.dataClima,
+                dataAgenda: data.dataAgenda,
+            };
+            setData(newData);
+            setTitulo("");
+            setTexto("");
+            console.log(newData);
         }
-        setData(newData);
-        setTitulo('')
-        setTexto('')
-        console.log(newData)
     };
     return (
         <form className="app_notas-form">
@@ -43,8 +56,11 @@ const AppNotasForm = () => {
                 onClick={(e) => guardarNota(e)}
                 className="app_notas-guardar-btn"
             >
-                Guardar
+                Agregar
             </button>
+            {modalTituloVacio ? (
+                <AppNotasModalTituloVacio cerrarModal={cerrarModal} />
+            ) : null}
         </form>
     );
 };
