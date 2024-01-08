@@ -7,22 +7,42 @@ import AppNotasForm from "./AppNotasForm";
 import AppNotasModalOpciones from "./AppNotasModalOpciones";
 
 const AppNotas = ({ cerrarAppNotas }) => {
-    const [nuevaNotaActive, setNuevaNotaActive] = useState(false);
     const { data, setData } = useContext(DataContext);
-    const [modalOpciones, setModalOpciones] = useState(false)
-    const [tituloModal, setTituloModal] = useState()
-    
+    const [modalOpciones, setModalOpciones] = useState(false);
+    const [notaSeleccionada, setNotaSeleccionada] = useState();
+    const [modoEdicion, setModoEdicion] = useState(false);
+
     const cerrarVentana = () => {
         cerrarAppNotas();
     };
 
-    const abrirOpciones = (titulo) => {
-        setTituloModal(titulo)
-        setModalOpciones(true)
-    }
+    const abrirOpciones = (el) => {
+        setNotaSeleccionada(el);
+        setModalOpciones(true);
+    };
 
     const cerrarModalOpciones = () => {
-        setModalOpciones(false)
+        setModalOpciones(false);
+    };
+
+    const eliminarNota = () => {
+        let temp = data.dataNotas.filter((el) => el.id !== notaSeleccionada.id);
+        let newData = {
+            dataNotas: temp,
+            dataClima: data.dataClima,
+            dataAgenda: data.dataAgenda,
+        };
+        setData(newData);
+        setModalOpciones(false);
+    };
+
+    const editarNota = () => {
+        setModoEdicion(true);
+        setModalOpciones(false);
+    };
+
+    const cerrarModoEdicion = () => {
+        setModoEdicion(false)
     }
 
     return (
@@ -42,7 +62,11 @@ const AppNotas = ({ cerrarAppNotas }) => {
                     <h3>Mis Notas</h3>
                 </div>
                 <div className="app_notas-body">
-                    <AppNotasForm />
+                    <AppNotasForm
+                        notaSeleccionada={notaSeleccionada}
+                        modoEdicion={modoEdicion}
+                        cerrarModoEdicion={cerrarModoEdicion}
+                    />
 
                     <ul className="app_notas-lista_de_notas">
                         {data.dataNotas ? (
@@ -50,7 +74,7 @@ const AppNotas = ({ cerrarAppNotas }) => {
                                 <li
                                     className="app_notas-lista_de_notas-nota"
                                     key={el.id}
-                                    onClick={() => abrirOpciones(el.titulo)}
+                                    onClick={() => abrirOpciones(el)}
                                 >
                                     <h4 className="app_notas-lista_de_notas-nota-titulo">
                                         {el.titulo}
@@ -66,7 +90,14 @@ const AppNotas = ({ cerrarAppNotas }) => {
                     </ul>
                 </div>
             </div>
-            {modalOpciones ? <AppNotasModalOpciones cerrarModalOpciones={cerrarModalOpciones} tituloModal={tituloModal} /> : null}
+            {modalOpciones ? (
+                <AppNotasModalOpciones
+                    cerrarModalOpciones={cerrarModalOpciones}
+                    eliminarNota={eliminarNota}
+                    editarNota={editarNota}
+                    notaSeleccionada={notaSeleccionada}
+                />
+            ) : null}
         </div>
     );
 };
