@@ -25,6 +25,16 @@
     border: none;
 }
 
+.window_btn_container-fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.generic_app {
+    margin-top: 32px;
+}
+
 .window_btn {
     width: 35px;
     border: none;

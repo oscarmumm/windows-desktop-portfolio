@@ -1,6 +1,7 @@
 .app_notas {
     background-color: var(--color1);
     color: var(--color4);
+    overflow: auto;
 }
 
 .app_notas-header {
@@ -94,4 +95,18 @@
     border: none;
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .app_notas-body {
+        flex-direction: column;
+    }
+    .app_notas-form {
+        width: auto;
+        height: 50vh;
+    }
+    .app_notas-lista_de_notas-nota {
+        width: 100%;
+        height: 100px;
+    }
 }

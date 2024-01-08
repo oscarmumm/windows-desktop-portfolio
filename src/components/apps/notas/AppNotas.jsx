@@ -47,7 +47,7 @@ const AppNotas = ({ cerrarAppNotas }) => {
 
     return (
         <div className="window window_full_screen app_notas">
-            <div className="window_btn_container">
+            <div className="window_btn_container window_btn_container-fixed">
                 <button className="window_btn window_minimize_btn">—</button>
                 <button
                     className="window_btn window_close_btn"
@@ -56,7 +56,7 @@ const AppNotas = ({ cerrarAppNotas }) => {
                     ╳
                 </button>
             </div>
-            <div className="">
+            <div className="generic_app">
                 <div className="app_notas-header">
                     <img className="app_notas-logo" src={notas_logo} alt="" />
                     <h3>Mis Notas</h3>
