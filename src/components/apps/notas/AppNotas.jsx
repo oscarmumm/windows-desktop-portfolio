@@ -1,13 +1,13 @@
 import "../../../styles/Window.css";
 import "../notas/AppNotas.css";
 import notas_logo from "../../../assets/icons/notes-notepad-svgrepo-com.svg";
-import { useState, useContext } from "react";
-import { DataContext } from "../../../contexts/DataContext";
+import {useState, useContext} from "react";
+import {DataContext} from "../../../contexts/DataContext";
 import AppNotasForm from "./AppNotasForm";
 import AppNotasModalOpciones from "./AppNotasModalOpciones";
 
-const AppNotas = ({ cerrarAppNotas }) => {
-    const { data, setData } = useContext(DataContext);
+const AppNotas = ({cerrarAppNotas}) => {
+    const {data, setData} = useContext(DataContext);
     const [modalOpciones, setModalOpciones] = useState(false);
     const [notaSeleccionada, setNotaSeleccionada] = useState();
     const [modoEdicion, setModoEdicion] = useState(false);
@@ -42,8 +42,8 @@ const AppNotas = ({ cerrarAppNotas }) => {
     };
 
     const cerrarModoEdicion = () => {
-        setModoEdicion(false)
-    }
+        setModoEdicion(false);
+    };
 
     return (
         <div className="window window_full_screen app_notas">
@@ -51,8 +51,7 @@ const AppNotas = ({ cerrarAppNotas }) => {
                 <button className="window_btn window_minimize_btn">—</button>
                 <button
                     className="window_btn window_close_btn"
-                    onClick={cerrarVentana}
-                >
+                    onClick={cerrarVentana}>
                     ╳
                 </button>
             </div>
@@ -67,27 +66,36 @@ const AppNotas = ({ cerrarAppNotas }) => {
                         modoEdicion={modoEdicion}
                         cerrarModoEdicion={cerrarModoEdicion}
                     />
-
-                    <ul className="app_notas-lista_de_notas">
-                        {data.dataNotas ? (
-                            data.dataNotas.map((el) => (
-                                <li
-                                    className="app_notas-lista_de_notas-nota"
-                                    key={el.id}
-                                    onClick={() => abrirOpciones(el)}
-                                >
-                                    <h4 className="app_notas-lista_de_notas-nota-titulo">
-                                        {el.titulo}
-                                    </h4>
-                                    <p className="app_notas-lista_de_notas-nota-texto">
-                                        {el.texto}
-                                    </p>
-                                </li>
-                            ))
+                    <div>
+                        {data.dataNotas.length > 0 ? (
+                            <h2 className="app_notas-lista_de_notas-titulo">
+                                Notas guardadas:
+                            </h2>
                         ) : (
-                            <p>No hay notas guardadas</p>
+                            <h2 className="app_notas-lista_de_notas-titulo">
+                                No hay notas guardadas
+                            </h2>
                         )}
-                    </ul>
+                        <ul className="app_notas-lista_de_notas">
+                            {data.dataNotas ? (
+                                data.dataNotas.map((el) => (
+                                    <li
+                                        className="app_notas-lista_de_notas-nota"
+                                        key={el.id}
+                                        onClick={() => abrirOpciones(el)}>
+                                        <h4 className="app_notas-lista_de_notas-nota-titulo">
+                                            {el.titulo}
+                                        </h4>
+                                        <p className="app_notas-lista_de_notas-nota-texto">
+                                            {el.texto}
+                                        </p>
+                                    </li>
+                                ))
+                            ) : (
+                                <p>No hay notas guardadas</p>
+                            )}
+                        </ul>
+                    </div>
                 </div>
             </div>
             {modalOpciones ? (

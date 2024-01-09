@@ -6,8 +6,13 @@
     font-size: 14px;
 }
 
-.accesos_directos_window {
+.acceso_directo_window {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .5rem;
+    text-align: center;
 }
 
 .acceso_directo{

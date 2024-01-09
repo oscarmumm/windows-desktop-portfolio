@@ -1,7 +1,8 @@
 .window {
     position: fixed;
-    top: 30vh;
-    left: 30vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-width: 200px;
     min-height: 200px;
     background-color: #272727;
@@ -16,6 +17,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    transform: translate(0, 0);
 }
 
 .window_btn_container {
@@ -52,4 +54,10 @@
 
 .window_close_btn:hover {
     background-color: #e81123;
+}
+
+.window_archivos {
+    padding: 1rem;
+    font-size: 14px;
+    display: flex;
 }

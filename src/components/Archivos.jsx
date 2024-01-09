@@ -1,5 +1,6 @@
 import "../styles/Window.css";
 import pdf_icon from "../assets/icons/pdf-svgrepo-com.svg";
+import folder_icon from '../assets/icons/folder-svgrepo-com.svg'
 
 const Archivos = ({cerrarArchivos}) => {
     const handleClick = () => {
@@ -15,14 +16,22 @@ const Archivos = ({cerrarArchivos}) => {
                     ╳
                 </button>
             </div>
-            <div className="window_content">
-                <div className="acceso_directo">
+            <div className="window_archivos">
+                <div className="acceso_directo_window">
                     <img
                         className="icono_acceso_directo"
                         src={pdf_icon}
                         alt=""
                     />
-                    <p className="leyenda_acceso_directo">Curriculum Vitae.pdf</p>
+                    <p className="leyenda_acceso_directo">Curriculum Vitae</p>
+                </div>
+                <div className="acceso_directo_window">
+                    <img
+                        className="icono_acceso_directo"
+                        src={folder_icon}
+                        alt=""
+                    />
+                    <p className="leyenda_acceso_directo">Certificaciones</p>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@ const AccesosDirectosEscritorio = ({abrirMiPc, abrirBienvenido, abrirArchivos}) 
                     alt=""
                     onClick={clickEnBienvenido}
                 />
-                <p className="leyenda_acceso_directo">Bienvenido.txt</p>
+                <p className="leyenda_acceso_directo">Bienvenido</p>
             </div>
         </div>
     );

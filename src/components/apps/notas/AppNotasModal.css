@@ -16,13 +16,13 @@
     max-width: 350px;
     padding: 1rem 3rem;
     border-radius: 10px;
-    background-color: var(--color2);
+    background-color: var(--app-notas-color2);
 }
 
 .modal_titulo {
     text-align: center;
     padding: 1rem 0;
-    color: var(--color4);
+    color: var(--app-notas-color4);
 }
 
 .modal_btn_div {
@@ -38,7 +38,7 @@
     border-radius: 5px;
     font-weight: bold;
     min-width: 90px;
-    color: var(--color1);
+    color: var(--app-notas-color1);
     font-size: .8rem;
     text-align: center;
     cursor: pointer;
@@ -49,14 +49,14 @@
 }
 
 .btn_cyan {
-    background-color: var(--color3);
+    background-color: var(--app-notas-color3);
     text-decoration: none;
 }
 
 .btn_orange {
-    background-color:var(--color5);
+    background-color:var(--app-notas-color5);
 }
 
 .btn_grey {
-    background-color: var(--color4);
+    background-color: var(--app-notas-color4);
 }

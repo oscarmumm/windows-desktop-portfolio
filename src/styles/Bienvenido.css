@@ -1,6 +1,8 @@
 .bienvenido_txt {
     padding: 1rem;
-    color: #fff;
+    background-color: var(--app-notas-color2);
+    color: var(--app-notas-color4);
+    min-width: 400px;
 }
 
 .bienvenido_txt p {
