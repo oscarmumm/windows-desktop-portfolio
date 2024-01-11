@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0,0.5);
-    border: 2px solid red;
 }
 
 .modal_div {
@@ -101,5 +100,6 @@
     }
     .modal_btn_div {
         width: 100%;
+        justify-content: center;
     }
 }
