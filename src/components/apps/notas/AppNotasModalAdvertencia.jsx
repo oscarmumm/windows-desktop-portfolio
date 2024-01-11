@@ -7,9 +7,9 @@ const AppNotasModalAdvertencia = ({confirmaEliminar, revocaEliminar}) => {
     }
     return (
     <div className="modal_pantalla">
-            <div className="modal_div">
+            <div className="modal_div_advertencia">
                 <h2 className="modal_titulo">¿Está seguro de borrar la nota?</h2>
-                <div className="modal_btn_div">
+                <div className="modal_btn_div-advertencia">
                     <button className="modal_btn btn_orange" onClick={borrar}>
                         Si, eliminar
                     </button>

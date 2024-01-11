@@ -1,7 +1,8 @@
 .app_notas {
     background-color: var(--app-notas-color1);
     color: var(--app-notas-color4);
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .app_notas-header {

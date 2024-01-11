@@ -28,11 +28,12 @@ const AppNotasModalOpciones = ({ cerrarModalOpciones, notaSeleccionada, eliminar
         <div className="modal_pantalla">
             <div className="modal_div">
                 <h2 className="modal_titulo">{notaSeleccionada.titulo}</h2>
+                <p className="modal_texto">{notaSeleccionada.texto}</p>
                 <div className="modal_btn_div">
                     <button className="modal_btn btn_cyan" onClick={confirmaEdicion}>Editar</button>
                     <button className="modal_btn btn_orange" onClick={mostrarAdvertencia}>Eliminar</button>
                     <button className="modal_btn btn_gray" onClick={volver}>
-                        Cancelar
+                        Cerrar
                     </button>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .modal_pantalla{
     z-index: 3;
-    height: 100vh;
+    height: calc(100vh - 60px);
     width: 100vw;
     position: fixed;
     top: 0;
@@ -9,14 +9,16 @@
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0,0.5);
+    border: 2px solid red;
 }
 
 .modal_div {
-
-    max-width: 350px;
+    height: 65vh;
+    width: 40vw;
     padding: 1rem 3rem;
     border-radius: 10px;
     background-color: var(--app-notas-color2);
+    position: relative;
 }
 
 .modal_titulo {
@@ -25,15 +27,22 @@
     color: var(--app-notas-color4);
 }
 
+.modal_texto {
+    padding: 1rem 2rem;
+}
+
 .modal_btn_div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .modal_btn {
-    padding: 1rem;
-    margin: .5rem;
+    padding: .5rem 1rem;
+    margin: 1rem;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -59,4 +68,38 @@
 
 .btn_grey {
     background-color: var(--app-notas-color4);
+}
+
+.modal_div_advertencia {
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: var(--app-notas-color2);
+    max-width: 300px;
+}
+
+.modal_btn_div-advertencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .modal_div {
+        width: 90vw;
+        height: 70vh;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .modal_div {
+        width: 90vw;
+        height: 70vh;
+    }
+    .modal_texto {
+        padding: 1rem 0;
+    }
+    .modal_btn_div {
+        width: 100%;
+    }
 }

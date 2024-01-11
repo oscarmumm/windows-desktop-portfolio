@@ -3,9 +3,11 @@
 :root {
     --app-notas-color1: rgba(19, 15, 30, 1);
     --app-notas-color2: rgba(31, 37, 49, 1);
-    --app-notas-color3: rgba(23, 212, 182, 1);
+    /* --app-notas-color3: rgba(23, 212, 182, 1); */
+    --app-notas-color3: rgba(0, 155, 222, 1);
     --app-notas-color4: rgba(216, 219, 234, 1);
-    --app-notas-color5: rgba(255, 95, 0, 1);
+    --app-notas-color5: rgba(247, 179, 52, 1);
+    /* --app-notas-color5: rgba(255, 95, 0, 1); */
 }
 
 * {
