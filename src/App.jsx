@@ -8,12 +8,15 @@ import ListaDeProgramas from "./components/ListaDeProgramas";
 import Bienvenido from "./components/Bienvenido";
 import Archivos from "./components/Archivos";
 import AppNotas from "./components/apps/notas/AppNotas";
+import AppClima from "./components/apps/clima/AppClima";
 
 const dataForm = {
-    dataNotas:[{id: 1, titulo: 'Ejemplo', texto: 'Esta es solo una nota de ejemplo'}],
-    dataClima:[],
-    dataAgenda:[]
-}
+    dataNotas: [
+        { id: 1, titulo: "Ejemplo", texto: "Esta es solo una nota de ejemplo" },
+    ],
+    dataClima: [],
+    dataAgenda: [],
+};
 
 function App() {
     const [data, setData] = useState(dataForm);
@@ -22,6 +25,7 @@ function App() {
     const [bienvenidoActive, setBienvenidoActive] = useState(false);
     const [archivosActive, setArchivosActive] = useState(false);
     const [appNotasActive, setAppNotasActive] = useState(false);
+    const [appClimaActive, setAppClimaActive] = useState(false);
 
     const abrirMiPc = () => {
         setMiPcActive(true);
@@ -52,6 +56,14 @@ function App() {
         setAppNotasActive(false);
     };
 
+    const abrirAppClima = () => {
+        setAppClimaActive(true);
+        setListaProgramasActive(false);
+    };
+    const cerrarAppClima = () => {
+        setAppClimaActive(false);
+    };
+
     const abrirListaProgramas = () => {
         setListaProgramasActive(true);
     };
@@ -60,7 +72,7 @@ function App() {
     };
 
     return (
-        <DataContext.Provider value={{data, setData}}>
+        <DataContext.Provider value={{ data, setData }}>
             <div className="desktop_app">
                 <AccesosDirectosEscritorio
                     abrirMiPc={abrirMiPc}
@@ -82,8 +94,14 @@ function App() {
                 {appNotasActive ? (
                     <AppNotas cerrarAppNotas={cerrarAppNotas} />
                 ) : null}
+                {appClimaActive ? (
+                    <AppClima cerrarAppClima={cerrarAppClima} />
+                ) : null}
                 {listaProgramasActive ? (
-                    <ListaDeProgramas abrirAppNotas={abrirAppNotas} />
+                    <ListaDeProgramas
+                        abrirAppNotas={abrirAppNotas}
+                        abrirAppClima={abrirAppClima}
+                    />
                 ) : null}
             </div>
         </DataContext.Provider>

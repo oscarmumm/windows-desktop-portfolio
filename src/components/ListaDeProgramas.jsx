@@ -4,15 +4,18 @@ import calculadora_logo from '../assets/icons/calculator-svgrepo-com.svg'
 import notas_logo from '../assets/icons/notes-notepad-svgrepo-com.svg'
 import agenda_logo from '../assets/icons/calendar-svgrepo-com.svg'
 
-const ListaDeProgramas = ({abrirAppNotas}) => {
+const ListaDeProgramas = ({abrirAppNotas, abrirAppClima}) => {
     const clickEnAppNotas = () => {
         abrirAppNotas()
+    }
+    const clickEnAppClima = () => {
+        abrirAppClima()
     }
     return (
         <div className="lista_de_programas">
             <h3 className="lista_de_programas-titulo">Todos los programas</h3>
             <ul>
-                <li>
+                <li onClick={clickEnAppClima}>
                     <img className="lista_de_programas-icono" src={clima_logo} alt="" />
                     <p>El clima</p>
                 </li>

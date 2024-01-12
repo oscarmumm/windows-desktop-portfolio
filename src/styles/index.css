@@ -1,13 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
+    /* COLORES DE LA APP DE NOTAS */
     --app-notas-color1: rgba(19, 15, 30, 1);
     --app-notas-color2: rgba(31, 37, 49, 1);
-    /* --app-notas-color3: rgba(23, 212, 182, 1); */
     --app-notas-color3: rgba(0, 155, 222, 1);
     --app-notas-color4: rgba(216, 219, 234, 1);
     --app-notas-color5: rgba(247, 179, 52, 1);
-    /* --app-notas-color5: rgba(255, 95, 0, 1); */
+    /* COLORES DE LA APP DE CLIMA */
+    --01d: linear-gradient(0deg, rgba(0, 140, 217, 1) 40%, rgba(0, 235, 255, 1) 100%);
+    --02d: linear-gradient(0deg, rgba(0, 140, 217, 1) 40%, rgba(0, 235, 255, 1) 100%);
+    --03d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --04d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --09d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --10d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --11d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --13d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --50d: linear-gradient(0deg, rgba(75, 103, 121, 1) 40%, rgba(123, 168, 198, 1) 100%);
+    --01n: linear-gradient(0deg, rgb(1, 6, 53) 40%, rgba(34, 0, 180, 1) 100%);
+    --02n: linear-gradient(0deg, rgb(1, 6, 53) 40%, rgba(34, 0, 180, 1) 100%);
+    --03n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
+    --04n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
+    --09n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
+    --10n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
+    --11n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
+    --13n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
+    --50n: linear-gradient(0deg, rgba(48, 41, 78, 1) 40%, rgba(104, 92, 157, 1) 100%);
 }
 
 * {

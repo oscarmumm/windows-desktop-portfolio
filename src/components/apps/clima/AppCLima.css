@@ -1,0 +1,43 @@
+.app_clima {
+    background: var(--01d);
+}
+
+.app_clima_header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app_clima_buscador {
+    padding: .75rem;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.app_clima_buscador:focus {
+    outline: none;
+}
+
+.clima_tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.clima_tarjeta-info {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.clima_tarjeta-info_icono {
+    width: 30px;
+}
